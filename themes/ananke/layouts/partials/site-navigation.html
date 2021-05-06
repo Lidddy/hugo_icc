@@ -1,0 +1,54 @@
+<nav class="flex justify-between items-center center pv3 ph3" role="navigation">
+    <div class="flex items-center flex-no-shrink">
+      <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib">
+        {{ with .Site.Params.site_logo }}
+          <img src="{{ . }}" alt="{{ $.Site.Title }}" id="logo"/>
+        {{ else }}
+          {{ .Site.Title }}
+        {{ end }}
+      </a>
+    </div>
+    <div class="flex">
+      <button id="hamburgerbtn"
+              class="flex items-center ph-3 pv-1 hover-white white-90">
+              <img src="/images/menu.svg">
+      </button>
+    </div>
+    <div class="flex items-center" id="mobileMenu">
+      {{ if .Site.Menus.main }}
+        <ul class="pl0 mr1" id="mobileMenuList">
+          {{ range .Site.Menus.main }}
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="{{ .URL }}" title="{{ .Name }} page">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      {{ partial "i18nlist.html" . }}
+      {{ partialCached "social-follow.html" . }}
+    </div>
+  <button id="arrowTop">
+    <img src="/images/arrow.svg">
+  </button>
+</nav>
+<style>
+    .active {
+        display: block;
+    }
+</style>
+<script>
+    let hamburger = document.getElementById('hamburgerbtn');
+
+    let mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+    });
+</script>
+<script type="text/javascript">
+    document.getElementById( 'arrowTop').addEventListener( 'click', () => {
+    window.scrollTo( 0, 0 );
+      });
+</script>

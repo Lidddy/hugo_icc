@@ -1,0 +1,103 @@
+title = "Інформаційно-обчислювальний центр"
+baseURL = "https://example.com"
+languageCode = "uk"
+theme = "ananke"
+#themesDir = "../.."
+resourceDir = "../resources"
+
+DefaultContentLanguage = "uk"
+#SectionPagesMenu = "main"
+Paginate = 5 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[languages]
+  [languages.uk]
+    title = "ІОЦ"
+    weight = 1
+    contentDir = "content/uk"
+    [languages.uk.menu]
+  [languages.en]
+    title = "ICC"
+    weight = 2
+    contentDir = "content/en"
+    [languages.en.menu]
+
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  #favicon = ""
+  site_logo = "/images/gerb.gif"
+  #description = "Інформаційно-обчислювальний центр"
+  facebook = "https://www.facebook.com/icc.knu.ua/"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/cabels_1.jpg"
+  recent_posts_number = 3
+  custom_css = ["css/buttons.css"]
+
+[menu]
+
+    [[languages.uk.menu.main]]
+      identifier = "home"
+      name = "Головна"
+      url = "/"
+      weight = 1
+
+    [[languages.uk.menu.main]]
+      identifier = "news"
+      name = "Новини"
+      url = "/post/"
+      weight = 2
+
+    [[languages.uk.menu.main]]
+      identifier = "about"
+      name = "Про нас"
+      url = "/about/"
+      weight = 3
+
+    [[languages.uk.menu.main]]
+      identifier = "contact"
+      name = "Контакти"
+      url = "/contact/"
+      weight = 4
+
+    [[languages.uk.menu.main]]
+      identifier = "faq"
+      name = "FAQ"
+      url = "/faq/"
+      weight = 5
+
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/en/"
+      weight = 1
+
+    [[languages.en.menu.main]]
+      identifier = "news"
+      name = "News"
+      url = "/en/post/"
+      weight = 2
+
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/en/about/"
+      weight = 3
+
+    [[languages.en.menu.main]]
+      identifier = "contact"
+      name = "Contact"
+      url = "/en/contact/"
+      weight = 4
+
+    [[languages.en.menu.main]]
+      identifier = "faq"
+      name = "FAQ"
+      url = "/en/faq/"
+      weight = 5
